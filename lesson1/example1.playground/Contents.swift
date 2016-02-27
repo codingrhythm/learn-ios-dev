@@ -17,3 +17,17 @@ finalString = "I am a cool guy"
     use let instead of var where possible
     and make a new string that looks like: Hi, my name is XXX, YYY is my father and my mother's name is ZZZ.
 */
+
+
+
+
+
+
+
+
+
+
+
+/**
+    Use your imagination to write some code do something
+*/
