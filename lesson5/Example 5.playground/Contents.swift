@@ -10,7 +10,14 @@ import Foundation
 
 // Please use the answer above to define a list of Australia States
 // Use for in loop to print all state names
-let auStates = ["NSW":"New South Wales", "QLD":"Queensland", "SA":"South Australia", "TAS":"Tasmania", "VIC":"Victoria", "WA":"Western Australia"]
+let auStates = [
+    "NSW":"New South Wales",
+    "QLD":"Queensland",
+    "SA":"South Australia",
+    "TAS":"Tasmania",
+    "VIC":"Victoria",
+    "WA":"Western Australia"
+]
 
 
 // How can you write code to find if NSW is an Australia State?
@@ -67,13 +74,20 @@ for eachState in statesDetail {
 // Only print out state which it's population is more than 2 million
 
 
+print("===================================")
 for eachState in statesDetail {
-    for population in eachState.values{
-
+    
+    if let population = eachState["Population"] {
+        if Int(population) > 2000000 {
+            print(eachState["State"])
+        }
+    }
+    /*for population in eachState.values {
+        print(population)
         if Int(population) > 2000000{
 
             print ("\(eachState["State"]!)")}
-   }
+   }*/
 }
 
 
