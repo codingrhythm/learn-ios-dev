@@ -74,14 +74,21 @@ for eachState in statesDetail {
 // Only print out state which it's population is more than 2 million
 
 
+print("===================================")
 for eachState in statesDetail {
-    if let population = eachState["population"]{
 
+    
+    if let population = eachState["Population"] {
+        if Int(population) > 2000000 {
+            print(eachState["State"])
+        }
+    }
+    /*for population in eachState.values {
+        print(population)
         if Int(population) > 2000000{
 
-            print ("\(eachState["State"])")
-        }
-   }
+            print ("\(eachState["State"]!)")}
+   }*/
 }
 
 
