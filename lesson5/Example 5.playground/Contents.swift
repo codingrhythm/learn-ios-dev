@@ -10,7 +10,14 @@ import Foundation
 
 // Please use the answer above to define a list of Australia States
 // Use for in loop to print all state names
-let auStates = ["NSW":"New South Wales", "QLD":"Queensland", "SA":"South Australia", "TAS":"Tasmania", "VIC":"Victoria", "WA":"Western Australia"]
+let auStates = [
+    "NSW":"New South Wales",
+    "QLD":"Queensland",
+    "SA":"South Australia",
+    "TAS":"Tasmania",
+    "VIC":"Victoria",
+    "WA":"Western Australia"
+]
 
 
 // How can you write code to find if NSW is an Australia State?
@@ -31,7 +38,7 @@ for itemE in listE.sort(){
 
 
 // Find common numbers (included in both list)
-let listD = listA.union(listB).sort()
+let listD = listA.intersect(listB).sort()
 
 // Can you use code to check if listC is a subset of listA?
 let listC:Set<Int> = [1, 3, 12]
@@ -68,11 +75,12 @@ for eachState in statesDetail {
 
 
 for eachState in statesDetail {
-    for population in eachState.values{
+    if let population = eachState["population"]{
 
         if Int(population) > 2000000{
 
-            print ("\(eachState["State"]!)")}
+            print ("\(eachState["State"])")
+        }
    }
 }
 
